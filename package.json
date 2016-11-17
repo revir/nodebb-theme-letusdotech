@@ -1,0 +1,26 @@
+{
+  "name": "nodebb-theme-letusdotech",
+  "version": "2.9.3",
+  "nbbpm": {
+    "compatibility": "^1.3.0"
+  },
+  "description": "NodeBB theme for letus.tech",
+  "main": "theme.less",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/revir/nodebb-theme-letusdotech"
+  },
+  "keywords": [
+    "nodebb",
+    "material",
+    "theme",
+    "letus.tech"
+  ],
+  "author": {
+    "name": "River Yang",
+    "email": "revir.qing@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/revir/nodebb-theme-letusdotech/issues"
+  }
+}
