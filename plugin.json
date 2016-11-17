@@ -15,6 +15,9 @@
 			"hook": "static:assets.prepare", "method": "modifyLessVar"
 		},
 		{
+			"hook": "action:topic.save", "method": "saveTopicToParentCategories"
+		},
+		{
 			"hook": "filter:category.get", "method": "getCategoryTreeInfo"
 		}
 	],
