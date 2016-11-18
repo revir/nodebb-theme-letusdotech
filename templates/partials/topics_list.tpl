@@ -38,23 +38,27 @@
 
 			<!-- IF template.category -->
 			<small>
-            	[[global:posts]] <span class="human-readable-number" title="{topics.postcount}"></span> | [[global:views]] <span class="human-readable-number" title="{topics.viewcount}"></span> | 
+                <a class="category-name" href="{config.relative_path}/category/{topics.category.slug}">
+                    {topics.category.name}
+                </a>&bull;
+
+            	<i title="[[global:posts]]" class="fa fa-comment-o"></i> <span class="human-readable-number" title="{topics.postcount}"></span> &bull; <i title="[[global:views]]" class="fa fa-eye"></i> <span class="human-readable-number" title="{topics.viewcount}"></span> &bull;
             	<!-- IF topics.user.uid -->
 				<a href="{config.relative_path}/user/{topics.user.userslug}"><strong>{topics.user.username}</strong></a>
 				<!-- ELSE -->
 				<strong>[[global:guest]]</strong>
 				<!-- ENDIF topics.user.uid -->
-				<span class="timeago" title="{topics.timestampISO}"></span>
+				<span class="timeago text-muted" title="{topics.timestampISO}"></span>
 			</small>
 			<!-- ENDIF template.category -->
 
 			<!-- IF !template.category -->
 			<small class="lv-small">
-				<span class="hidden-xs">[[global:posts]] <span class="human-readable-number" title="{topics.postcount}"></span> | [[global:views]] <span class="human-readable-number" title="{topics.viewcount}"></span> | </span>
-				<strong>{topics.user.username}</strong> <a href="{config.relative_path}/category/{topics.category.slug}">[[global:posted_in, {topics.category.name}]] <i class="fa {topics.category.icon}"></i></a> <span class="timeago" title="{topics.timestampISO}"></span>
+				<span class="hidden-xs"><i title="[[global:posts]]" class="fa fa-comment-o"></i> <span class="human-readable-number" title="{topics.postcount}"></span> &bull; <i title="[[global:views]]" class="fa fa-eye"></i> <span class="human-readable-number" title="{topics.viewcount}"></span> &bull; </span>
+				<strong>{topics.user.username}</strong> <a href="{config.relative_path}/category/{topics.category.slug}">[[global:posted_in, {topics.category.name}]] <i class="fa {topics.category.icon}"></i></a> <span class="timeago text-muted" title="{topics.timestampISO}"></span>
 			</small>
 			<!-- ENDIF !template.category -->
-			
+
 			<ul class="lv-attrs hidden-xs">
                 <!-- IF topics.tags.length -->
 				<!-- BEGIN tags -->
@@ -67,7 +71,7 @@
             </ul>
 
 			<div class="lv-actions actions hidden-xs">
-                <ul>
+                <ul class="teaser-info" style="border-color: {topics.category.bgColor}">
                 <!-- IF topics.unreplied -->
 				<li class="lv-small">[[category:no_replies]]</li>
 				<!-- ELSE -->
@@ -81,9 +85,14 @@
 		                <!-- ENDIF topics.teaser.user.picture -->
 					</a>
 					<a href="{config.relative_path}/topic/{topics.slug}/{topics.teaser.index}">
-						<span class="timeago" title="{topics.teaser.timestampISO}"></span>
+						<span class="timeago text-muted" title="{topics.teaser.timestampISO}"></span>
 					</a>
 				</li>
+                <li>
+                    <div class="post-content">
+                        {topics.teaser.content}
+                    </div>
+                </li>
 				<!-- ENDIF topics.teaser.index -->
 				<!-- IF !topics.teaser.index -->
 				<li class="lv-small">[[category:no_replies]]</li>
