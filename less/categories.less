@@ -109,6 +109,17 @@
 		}
     }
 
+    .category-tree {
+        background-color: #2b343a;
+        padding-top: 10px;
+
+        .ul-category-tree>li {
+            padding: 3px;
+            font-size: 14px;
+
+        }
+    }
+
     .listview {
         .user-avatar {
             .user-avatar(40px);
@@ -118,8 +129,14 @@
             .user-icon(40px, 2rem);
         }
 
-        a.category-name {
+        a.topic-category-name {
             color: coral;
+            &:hover {
+                color: #F44336;
+            }
+            &.active {
+                color: #F44336;
+            }
         }
 
         [component="topic/header"] {

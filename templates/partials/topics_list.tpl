@@ -38,7 +38,7 @@
 
 			<!-- IF template.category -->
 			<small>
-                <a class="category-name" href="{config.relative_path}/category/{topics.category.slug}">
+                <a class="topic-category-name" href="{config.relative_path}/category/{topics.category.slug}">
                     {topics.category.name}
                 </a>&bull;
 
