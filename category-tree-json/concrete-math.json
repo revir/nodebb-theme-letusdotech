@@ -67,7 +67,18 @@
             {"name": "Fibonacci Numbers"},
             {"name": "Continuants"},
             {"name": "Exercises"}
-
+        ]
+    }, {
+        "name": "Generating Functions",
+        "children": [
+            {"name": "Domino Theory and Change"},
+            {"name": "Basic Maneuvers"},
+            {"name": "Solving Recurrences"},
+            {"name": "Special Generating Functions"},
+            {"name": "Convolutions"},
+            {"name": "Exponential Generating Functions"},
+            {"name": "Dirichlet Generating Functions"},
+            {"name": "Exercises"}
         ]
     }
 ]
