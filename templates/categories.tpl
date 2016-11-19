@@ -3,45 +3,50 @@
 	<!-- BEGIN categories -->
 	<div component="categories/category" data-cid="{categories.cid}" class="<!-- IF categories.class -->{categories.class}<!-- ELSE -->col-md-3 col-sm-6 col-xs-12<!-- ENDIF categories.class -->">
 		<div class="category-card" style="{function.generateCategoryBackground}">
-			<!-- IF categories.link -->
-				<a href="{categories.link}" itemprop="url" target="_blank" >
-			<!-- ELSE -->
-				<a href="{config.relative_path}/category/{categories.slug}" itemprop="url" >
-			<!-- ENDIF categories.link -->
-				<div class="category-card-body">
-					<ul class="category-counts pull-right">
-	                    <li>
-	                        <i class="fa fa-book"></i><span class="human-readable-number" title="{categories.totalTopicCount}"></span>
-	                    </li>
-	                    <li>
-	                        <i class="fa fa-pencil"></i><span class="human-readable-number" title="{categories.totalPostCount}"></span>
-	                    </li>
-	                </ul>
-					<h4>
-						{categories.name} <!-- IF categories.icon -->
-								<i class="fa {categories.icon} fa-fw"></i>
-								<!-- ENDIF categories.icon -->
-					</h4>
-					<small>{categories.descriptionParsed}</small>
-				</div>
-			</a>
-			<div class="category-card-footer">
-				<!-- BEGIN posts -->
-				<div component="category/posts">
-					<div class="pull-left hidden-xs user-avatar">
-				    	<a href="{config.relative_path}/user/{categories.posts.user.userslug}">
-				        	<!-- IF categories.posts.user.picture -->
-		                    <img class="user-avatar" src="{categories.posts.user.picture}" alt="{categories.posts.user.username}" title="{categories.posts.user.username}"/>
-		                    <!-- ELSE -->
-		                    <div class="user-icon" title="{categories.posts.user.username}" style="background-color: {categories.posts.user.icon:bgColor};">{categories.posts.user.icon:text}</div>
-		                    <!-- ENDIF categories.posts.user.picture -->
-				    	</a>
+			<div class="category-wrapper">
+				<!-- IF categories.link -->
+					<a href="{categories.link}" itemprop="url" target="_blank" >
+				<!-- ELSE -->
+					<a href="{config.relative_path}/category/{categories.slug}" itemprop="url" >
+				<!-- ENDIF categories.link -->
+					<div class="category-card-body">
+						<ul class="category-counts pull-right">
+		                    <li>
+		                        <i class="fa fa-book"></i><span class="human-readable-number" title="{categories.totalTopicCount}"></span>
+		                    </li>
+		                    <li>
+		                        <i class="fa fa-pencil"></i><span class="human-readable-number" title="{categories.totalPostCount}"></span>
+		                    </li>
+		                </ul>
+						<h4>
+							{categories.name} <!-- IF categories.icon -->
+									<i class="fa {categories.icon} fa-fw"></i>
+									<!-- ENDIF categories.icon -->
+						</h4>
 					</div>
-					<div class="topic-title">
-						<a href="{config.relative_path}/topic/{categories.posts.topic.slug}/{categories.posts.index}">{categories.posts.topic.title}</a>
+				</a>
+				<div class="category-card-footer">
+					<!-- BEGIN posts -->
+					<div component="category/posts">
+						<div class="pull-left hidden-xs user-avatar">
+					    	<a href="{config.relative_path}/user/{categories.posts.user.userslug}">
+					        	<!-- IF categories.posts.user.picture -->
+			                    <img class="user-avatar" src="{categories.posts.user.picture}" alt="{categories.posts.user.username}" title="{categories.posts.user.username}"/>
+			                    <!-- ELSE -->
+			                    <div class="user-icon" title="{categories.posts.user.username}" style="background-color: {categories.posts.user.icon:bgColor};">{categories.posts.user.icon:text}</div>
+			                    <!-- ENDIF categories.posts.user.picture -->
+					    	</a>
+						</div>
+						<div class="topic-title">
+							<a href="{config.relative_path}/topic/{categories.posts.topic.slug}/{categories.posts.index}">{categories.posts.topic.title}</a>
+						</div>
+						<small class="hidden-xs">
+							<span class="timeago text-muted" title="{categories.posts.topic.timestampISO}">
+							</span>
+						</small>
 					</div>
+					<!-- END posts -->
 				</div>
-				<!-- END posts -->
 			</div>
 		</div>
 	</div>

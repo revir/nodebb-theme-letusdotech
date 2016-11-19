@@ -1,9 +1,28 @@
 <div class="category">
-	<!-- IMPORT partials/breadcrumbs.tpl -->
-
 	<!-- IF categoryTree.length -->
 	<div class=" col-md-9 col-sm-12 col-xs-12">
 	<!-- ENDIF categoryTree.length -->
+
+	<!-- IMPORT partials/breadcrumbs.tpl -->
+
+	<div class="card description-card clearfix">
+		<div
+			id="category-{cid}" class="category-header category-header-image category-header-image-{rootCategory.imageClass} pull-left"
+			style="
+				<!-- IF rootCategory.backgroundImage -->background-image: url({rootCategory.backgroundImage});<!-- ENDIF rootCategory.backgroundImage -->
+				color: {rootCategory.color};
+			"
+		>
+			<!-- IF rootCategory.icon -->
+			<div><i class="fa {rootCategory.icon} fa-2x"></i></div>
+			<!-- ENDIF rootCategory.icon -->
+		</div>
+
+		<div class="description">
+			{rootCategory.description}
+		</div>
+	</div>
+
 	<div class="card">
 		<div class="listview lv-bordered lv-lg">
 			<div class="lv-header-alt">
