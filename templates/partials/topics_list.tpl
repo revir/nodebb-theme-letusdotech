@@ -26,7 +26,7 @@
         	<!-- ENDIF topics.thumb -->
     	</div>
     	<div class="media-body">
-    		<div class="lv-title" component="topic/header">
+    		<div class="lv-title" title="{topics.title}" component="topic/header">
     			<strong><i component="topic/pinned" class="fa fa-thumb-tack <!-- IF !topics.pinned -->hide<!-- ENDIF !topics.pinned -->"></i>
 				<i component="topic/locked" class="fa fa-lock <!-- IF !topics.locked -->hide<!-- ENDIF !topics.locked -->"></i></strong>
 				<!-- IF !topics.noAnchor -->
@@ -70,7 +70,7 @@
 				<!-- ENDIF topics.tags.length -->
             </ul>
 
-			<div class="lv-actions actions hidden-xs">
+			<div class="lv-actions actions hidden-xs hidden-sm">
                 <ul class="teaser-info" style="border-color: {topics.category.bgColor}">
                 <!-- IF topics.unreplied -->
 				<li class="lv-small">[[category:no_replies]]</li>

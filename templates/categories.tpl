@@ -37,11 +37,11 @@
 			                    <!-- ENDIF categories.posts.user.picture -->
 					    	</a>
 						</div>
-						<div class="topic-title">
+						<div class="topic-title" title="{categories.posts.topic.title}">
 							<a href="{config.relative_path}/topic/{categories.posts.topic.slug}/{categories.posts.index}">{categories.posts.topic.title}</a>
 						</div>
 						<small class="hidden-xs">
-							<span class="timeago text-muted" title="{categories.posts.topic.timestampISO}">
+							<span class="timeago text-muted" title="{categories.posts.timestampISO}">
 							</span>
 						</small>
 					</div>
