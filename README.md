@@ -1,19 +1,20 @@
-Theme for NodeBB using Google Material Design
+Theme for Letus.tech modified from nodebb-theme-material.
+
+See [demo](https://letus.tech).
+
 =========================
 
 ## Installation
 
-    * Install this theme using the "Plugins" page in NodeBB ACP
-    
-    * After installation switch to the theme using the "Themes" page in ACP
-    
-    * Restart NodeBB
+    npm install nodebb-theme-letusdotech
 
 
 ## Credits
 
+nodebb-theme-material by Pichalite https://github.com/pichalite/nodebb-theme-material
+
 Animate.css - http://daneden.me/animate
 
-Waves by Alfiana E. Sibuea http://fian.my.id/Waves 
+Waves by Alfiana E. Sibuea http://fian.my.id/Waves
 
 nodebb-theme-persona by [NodeBB](https://github.com/nodebb/)
