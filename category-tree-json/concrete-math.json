@@ -80,5 +80,26 @@
             {"name": "Dirichlet Generating Functions"},
             {"name": "Exercises"}
         ]
+    }, {
+        "name": "Discrete Probability",
+        "children": [
+            {"name": "Definitions"},
+            {"name": "Mean and Variance"},
+            {"name": "Probability Generating Functions"},
+            {"name": "Flipping Coins"},
+            {"name": "Hashing"},
+            {"name": "Exercises"}
+        ]
+    }, {
+        "name": "Asymptotics",
+        "children": [
+            {"name": "A Hierarchy"},
+            {"name": "O Notation"},
+            {"name": "O Manipulation"},
+            {"name": "Two Asymptotic Tricks"},
+            {"name": "Euler's Summation Formula"},
+            {"name": "Final Summations"},
+            {"name": "Exercises"}
+        ]
     }
 ]
