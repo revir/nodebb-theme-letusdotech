@@ -5,6 +5,7 @@
 
 	<!-- IMPORT partials/breadcrumbs.tpl -->
 
+	<!-- IF categoryTree.length -->
 	<div class="card description-card clearfix">
 		<div
 			id="category-{cid}" class="category-header category-header-image category-header-image-{rootCategory.imageClass} pull-left"
@@ -22,6 +23,7 @@
 			{rootCategory.description}
 		</div>
 	</div>
+	<!-- ENDIF categoryTree.length -->
 
 	<div class="card">
 		<div class="listview lv-bordered lv-lg">
